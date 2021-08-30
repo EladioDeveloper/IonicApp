@@ -26,7 +26,7 @@ steps:
       command: install
       workingDir: '$(System.DefaultWorkingDirectory)'
   
-  - task: Npm@1 # npm i -g @angular/cli
+  - task: Npm@1 # npm run ng build -- prod
     displayName: 'npm angular install'
     inputs:
       command: install
