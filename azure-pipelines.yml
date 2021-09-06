@@ -21,3 +21,13 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
+    workingDir: '$(System.DefaultWorkingDirectory)'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run build'
+    
+
+- publish: 'www/' # Publish App artifact
+  artifact: 'www'
+  displayName: 'Publishing Artifact'
